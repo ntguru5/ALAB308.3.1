@@ -17,3 +17,15 @@ for (let num = 1; num <= 100; num++) {
         console.log(num);
     }
 }
+
+// alternative Fizz Buzz solution
+for (let num = 1; num <= 100; num++) {
+    console.log((num % 3 === 0 ? 'Fizz ' : '') + (num % 5 === 0 ? 'Buzz' : '') || num);
+}
+
+// PART 2 Prime Time
+// Declare an arbitrary number, n.
+// Create a loop that searches for the next prime number, starting at n and incrementing from there.
+// As soon as you find the prime number, log that number and exit the loop.
+
+let n = 9;
