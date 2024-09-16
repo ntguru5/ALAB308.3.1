@@ -75,4 +75,29 @@ for (let i = 0; i < csvData.length; i++) {
         currentCell++;
         continue;
     }
+
+    // if we encounter a newline, log the row and reset for next row
+    if (char === '\n') {
+        console.log(cell1, cell2, cell3, cell4); // log each row of data
+        cell1 = '';
+        cell2 = '';
+        cell3 = '';
+        cell4 = '';
+        currentCell = 1;
+        continue;
+    }
+
+    // store characters in cell based on currentCell value
+    if (currentCell === 1) {
+        cell1 += char;
+    } else if (currentCell === 2) {
+        cell2 += char;
+    } else if (currentCell === 3) {
+        cell3 += char;
+    } else if (currentCell === 4) {
+        cell4 += char;
+    }
 }
+
+// log the last row if it wasn't followed by a newline
+console.log(cell1, cell2, cell3, cell4);
